@@ -128,32 +128,8 @@ npm run dev
 # Opens at http://localhost:5173
 ```
 
----
 
-## API Reference
 
-### Ingest a file
-```bash
-curl -X POST http://localhost:8000/api/ingest/file \
-  -F "file=@policy_2024.pdf" \
-  -F "source_type=policy"
-```
-
-### Query
-```bash
-curl -X POST http://localhost:8000/api/query/ \
-  -H "Content-Type: application/json" \
-  -d '{"query": "What is the current refund policy?", "top_k": 10}'
-```
-
-### Point-in-time query
-```bash
-curl -X POST "http://localhost:8000/api/query/point-in-time?target_date=2022-06-01" \
-  -H "Content-Type: application/json" \
-  -d '{"query": "What was the data retention policy?"}'
-```
-
----
 
 ## How It Works
 
@@ -175,17 +151,3 @@ Synthesizer       → Generates answer with date citations + timeline report
 
 ---
 
-## Sample Output
-
-```
-CURRENT POLICY (as of March 2024):
-Hybrid work is mandatory — minimum 3 days in office per week.
-— Source: hr_policy_2024.pdf, effective March 2024
-
-⚠️ TEMPORAL CONFLICT DETECTED:
-  2021 → Max 2 days WFH allowed
-  2022 → Full remote permitted (engineering team)
-  2024 → Hybrid mandatory, 3 days in office ← CURRENT
-
-Confidence: 94% | Response time: 1.2s
-```
