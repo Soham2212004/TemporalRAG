@@ -10,6 +10,10 @@ Standard RAG retrieves the most semantically similar chunks — but similarity h
 
 ---
 
+<img width="1202" height="838" alt="Screenshot from 2026-06-24 12-36-44" src="https://github.com/user-attachments/assets/8dafd61b-b3b4-4c59-a0c2-69966a75e092" />
+<img width="1202" height="838" alt="Screenshot from 2026-06-24 12-36-50" src="https://github.com/user-attachments/assets/b7cfdc84-6019-4910-94fd-daa49ca7b658" />
+
+
 ## Key Features
 
 - **Temporal Decay Reranker** — scores chunks by recency using exponential decay, tunable per source type
